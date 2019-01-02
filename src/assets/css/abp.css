@@ -1,0 +1,13 @@
+.page_title {
+    color: deepskyblue;
+    font-size: 28px;
+}
+
+.main-btn {
+    background: cornflowerblue;
+    width: 80px;
+    height: 32px;
+    border-radius: 5px;
+    color: white;
+    border: 2px solid;
+}
