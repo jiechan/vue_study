@@ -4,10 +4,13 @@
 }
 
 .main-btn {
-    background: cornflowerblue;
-    width: 80px;
-    height: 32px;
-    border-radius: 5px;
-    color: white;
-    border: 2px solid;
+    background: #00bcd4;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 160px;
+    height: 90px;
+    border-radius: 10px;
+    font-size: 22px;
+    color: #fff;
+    border: 1px solid transparent;
+    outline: none;
 }
