@@ -14,3 +14,7 @@
     border: 1px solid transparent;
     outline: none;
 }
+
+body {
+    background: #fff;
+}
