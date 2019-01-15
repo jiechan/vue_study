@@ -1,12 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-import Idle from './views/Idle.vue'
+// import Idle from './views/Idle.vue'
 import ScanIDCard from './views/ScanIDCard.vue'
 import ScanFace from './views/ScanFace.vue'
 import LicenseList from './views/LicenseList.vue'
 import Printing from './views/Printing.vue'
 import Finished from './views/Finished.vue'
+import Search from './views/Search.vue'
 
 Vue.use(Router)
 
@@ -14,8 +15,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Idle',
-      component: Idle
+      name: 'Search',
+      component: Search
     },
     {
       path: '/about',

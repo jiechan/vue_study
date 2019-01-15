@@ -69,11 +69,11 @@ export default {
 .print-item {
     background: #fff;
     border: 1px solid #fff;
-    height: 164px;
-    width: 360px;
+    height: 15vh;
+    width: 80vw;
     border-radius: 10px;
     box-shadow: 0 0 30px rgba(0,0,0,0.2);
-    margin-left: 31.5vw;
+    margin-left: 10vw;
     margin-bottom: 20px;
 }
 </style>
