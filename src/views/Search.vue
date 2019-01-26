@@ -28,6 +28,10 @@
                 v-bind:key="detail.code" @click="selectSpec(detail, spec.label)">{{detail.name}}</span>
             </div>
         </div>
+
+        <div v-for="license in licenses" v-bind:key="license.index"> 
+            <p>{{license.name}}</p>
+        </div>
     </div>
 </template>
 <script>
@@ -71,8 +75,20 @@ export default {
                     {"code":"p23","name":"豆奶"},
                 ]
             }
-        ]
+        ],
+        licenses: []
       }
+    },
+    created() {
+        // this.$http.post("http://120.79.225.29:8085/getLicenseDetail",{"pripid":"370212000022016020258191"}).then(res=>{
+        //         // eslint-disable-next-line
+        //     console.log(res.data);
+        // });
+        this.$http.get("http://120.79.225.29:8085/getLicenseList",{params: {"cerno":"320621199204070538"}}).then(res=>{
+                // eslint-disable-next-line
+            console.log(res.data);
+            this.licenseList = res.data;
+        });
     },
     computed: {
         currentcode() {

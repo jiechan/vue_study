@@ -11,9 +11,12 @@ Vue.config.productionTip = false
 
 Vue.component('lottie', lottie)
 
+Vue.prototype.$http = axios
+axios.defaults.headers.post['Content-Type'] = 'application/json';
+
 new Vue({
   router,
   store,
-  axios,
+  // axios,
   render: h => h(App)
 }).$mount('#app')
