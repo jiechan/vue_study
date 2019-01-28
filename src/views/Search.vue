@@ -14,7 +14,7 @@
             <lottie :options="defaultOptions" :height="200" :width="200" v-on:animCreated="handleAnimation"/>
         </div>   
 
-        <div class="choice-group">
+        <!-- <div class="choice-group">
             <span class="choice-btn" v-for="item in choices" v-bind:class="currentcode === item.code ? 'active-btn': '' "
             v-bind:key="item.code" @click="choosed(item)">{{item.name}}</span>
         </div>
@@ -27,7 +27,11 @@
                 <span class="choice-btn" v-for="detail in spec.details" v-bind:class="currentSpec.includes(detail.name) ? 'active-btn': '' "
                 v-bind:key="detail.code" @click="selectSpec(detail, spec.label)">{{detail.name}}</span>
             </div>
-        </div>
+        </div> -->
+
+        <button @click="increaseToStore">加一加</button>
+        <p>{{currentStoreCount}}</p>
+        <button @click="decreaseToStore">减一减</button>
 
         <div v-for="license in licenses" v-bind:key="license.index"> 
             <p>{{license.name}}</p>
@@ -118,6 +122,9 @@ export default {
             }
             return this.activeSpecStr;
         },
+        currentStoreCount() {
+            return this.$store.state.count;
+        }
     },
     methods: {
         handleAnimation: function (anim) {
@@ -149,6 +156,12 @@ export default {
             this.activeSpecs.push(o);
             // eslint-disable-next-line
             console.log(this.activeSpecs);
+        },
+        increaseToStore() {
+            this.$store.dispatch('increment')
+        },
+        decreaseToStore() {
+            this.$store.dispatch('decrement')
         }
     }
 }
